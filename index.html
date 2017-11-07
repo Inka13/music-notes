@@ -1,0 +1,318 @@
+<html>
+  <head>
+    <title></title>
+    <link href="style" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <audio data-key="65" src="sounds/c.wav"></audio>
+    <audio data-key="87" src="sounds/cis.wav"></audio>
+    <audio data-key="83" src="sounds/d.wav"></audio>
+    <audio data-key="69" src="sounds/dis.wav"></audio>
+    <audio data-key="68" src="sounds/e.wav"></audio>
+    <audio data-key="70" src="sounds/f.wav"></audio>
+    <audio data-key="84" src="sounds/fis.wav"></audio>
+    <audio data-key="71" src="sounds/g.wav"></audio>
+    <audio data-key="90" src="sounds/gis.wav"></audio>
+    <audio data-key="72" src="sounds/a.wav"></audio>
+    <audio data-key="85" src="sounds/ais.wav"></audio>
+    <audio data-key="74" src="sounds/b.wav"></audio>
+    <audio data-key="75" src="sounds/c2.wav"></audio>
+    <audio data-key="79" src="sounds/cis2.wav"></audio>
+    <audio data-key="76" src="sounds/d2.wav"></audio>
+    <audio data-key="80" src="sounds/dis2.wav"></audio>
+    <audio data-key="186" src="sounds/e2.wav"></audio>
+    <audio data-key="222" src="sounds/f2.wav"></audio>
+    <audio data-key="221" src="sounds/fis2.wav"></audio>
+    <audio data-key="220" src="sounds/g2.wav"></audio>
+    <audio data-key="86" src="sounds/gis2.wav"></audio>
+    <audio data-key="66" src="sounds/a2.wav"></audio>
+    <audio data-key="78" src="sounds/ais2.wav"></audio>
+    <audio data-key="77" src="sounds/b2.wav"></audio>
+  <div class="keys">
+    <div data-key="65" class="key">
+  	    
+  	    <span class="sound">A</span>
+  	  </div>
+  	  <div data-key="87" class="key black">
+  	    
+  	    <span class="sound">W</span>
+  	  </div>
+  	  <div data-key="83" class="key">
+  	    
+  	    <span class="sound">S</span>
+  	  </div>
+  	  <div data-key="69" class="key black">
+  	    
+  	    <span class="sound">E</span>
+  	  </div>
+  	  <div data-key="68" class="key">
+  	    
+  	    <span class="sound">D</span>
+  	  </div>
+  	  <div data-key="70" class="key">
+  	    
+  	    <span class="sound">F</span>
+  	  </div>
+  	  <div data-key="84" class="key black">
+  	    
+  	    <span class="sound">T</span>
+  	  </div>
+  	  <div data-key="71" class="key">
+  	    
+  	    <span class="sound">G</span>
+  	  </div>
+  	  <div data-key="90" class="key black">
+  	    
+  	    <span class="sound">Z</span>
+  	  </div>
+      <div data-key="72" class="key">
+        
+        <span class="sound">H</span>
+      </div>
+      <div data-key="85" class="key black">
+        
+        <span class="sound">U</span>
+      </div>
+      <div data-key="74" class="key">
+        
+        <span class="sound">J</span>
+      </div>
+      <div data-key="75" class="key">
+  	    
+  	    <span class="sound">K</span>
+  	  </div>
+  	  <div data-key="79" class="key black">
+  	    
+  	    <span class="sound">O</span>
+  	  </div>
+  	  <div data-key="76" class="key">
+  	    
+  	    <span class="sound">L</span>
+  	  </div>
+  	  <div data-key="80" class="key black">
+  	    
+  	    <span class="sound">P</span>
+  	  </div>
+  	  <div data-key="186" class="key">
+  	    
+  	    <span class="sound">Č</span>
+  	  </div>
+  	  <div data-key="222" class="key">
+  	    
+  	    <span class="sound">Ć</span>
+  	  </div>
+      <div data-key="221" class="key black">
+        
+        <span class="sound">Đ</span>
+      </div>
+      <div data-key="220" class="key">
+        
+        <span class="sound">Ž</span>
+      </div>
+      <div data-key="86" class="key black">
+  	    
+  	    <span class="sound">V</span>
+  	  </div>
+  	  <div data-key="66" class="key">
+  	    
+  	    <span class="sound">B</span>
+  	  </div>
+      <div data-key="78" class="key black">
+        
+        <span class="sound">N</span>
+      </div>
+      <div data-key="77" class="key">
+        
+        <span class="sound">M</span>
+      </div>
+      
+  </div>
+  
+  <div class="container">
+
+    <div class="note">
+
+      <div class="nota">
+        <img src="kljuc.png" id="kljuc">
+      </div>
+    </div>
+    </div>
+  
+  </body>
+  <script>
+  function scrollDown(){
+   var div = document.querySelector('.container');
+   div.scrollTop = div.scrollHeight - div.clientHeight;
+}
+  var counter = 0;
+    function drawNote(e) {
+
+    	const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); 
+    	if(!key) return;
+    	counter += 1
+    	const note = document.querySelector('.nota');
+    	const polje = document.querySelector('.container');
+    	console.log(note.innerHTML);
+    	
+    	console.log('hi');
+        let cl='';
+    	 switch(e.keyCode) {
+    	 	case 65:
+    	 	cl='c'
+            break;
+            case 87:
+    	 	cl='cis'
+            break;
+            case 83:
+    	 	cl='d'
+            break;
+            case 69:
+    	 	cl='dis'
+            break;
+            case 68:
+    	 	cl='e'
+            break;
+            case 70:
+    	 	cl='f'
+            break;
+            case 84:
+    	 	cl='fis'
+            break;
+            case 71:
+    	 	cl='g'
+            break;
+            case 90:
+    	 	cl='gis'
+            break;
+            case 72:
+    	 	cl='a'
+            break;
+            case 85:
+    	 	cl='ais'
+            break;
+            case 74:
+    	 	cl='b'
+            break;
+            case 75:
+    	 	cl='c2'
+            break;
+            case 79:
+    	 	cl='cis2'
+            break;
+            case 76:
+    	 	cl='d2'
+            break;
+            case 80:
+    	 	cl='dis2'
+            break;
+            case 186:
+    	 	cl='e2'
+            break;
+            case 222:
+    	 	cl='f2'
+            break;
+            case 221:
+    	 	cl='fis2'
+            break;
+            case 220:
+    	 	cl='g2'
+            break;
+            case 86:
+    	 	cl='gis2'
+            break;
+            case 66:
+    	 	cl='a2'
+            break;
+            case 78:
+    	 	cl='ais2'
+            break;
+            case 77:
+    	 	cl='b2'
+            break;
+    	 }
+
+  if(time<250){
+      pic="nota.png" ;
+      if(cl==='c') pic="notac.png" ;
+      if(cl==='dis' || cl==='fis' || cl==='gis' || cl==='ais') pic="notais.png" ;
+      if(cl==='cis') pic="notacis.png" ;
+      if(cl==='b' || cl==='c2' || cl==='d2' || cl==='e2' || cl==='f2' || cl==='g2') pic="nota2.png" ;
+      if(cl==='b2'|| cl==='a2') pic="notac2.png" ;
+      if(cl==='dis2' || cl==='fis2' || cl==='gis2' || cl==='cis2') pic="notais2.png" ;
+      if(cl==='ais2') pic="notacis2.png" ;
+  }
+  if(time>=500 && time<1000){
+      pic="pola.png";
+      if(cl==='c') pic="polac.png";
+      if(cl==='dis' || cl==='fis' || cl==='gis' || cl==='ais') pic="polais.png";
+      if(cl==='cis') pic="polacis.png";
+      if(cl==='b' || cl==='c2' || cl==='d2' || cl==='e2' || cl==='f2' || cl==='g2') pic="pola2.png";
+      if(cl==='b2'|| cl==='a2') pic="polac2.png";
+      if(cl==='dis2' || cl==='fis2' || cl==='gis2' || cl==='cis2') pic="polais2.png";
+      if(cl==='ais2') pic="polacis2.png" ;
+  }
+  if(time>=1000){
+      pic="puna.png";
+      if(cl==='c') pic="punac.png";
+      if(cl==='dis' || cl==='fis' || cl==='gis' || cl==='ais') pic="punais.png";
+      if(cl==='cis') pic="punacis.png";
+      if(cl==='b' || cl==='c2' || cl==='d2' || cl==='e2' || cl==='f2' || cl==='g2') pic="puna2.png";
+      if(cl==='b2'|| cl==='a2') pic="punac2.png";
+      if(cl==='dis2' || cl==='fis2' || cl==='gis2' || cl==='cis2') pic="punais2.png";
+      if(cl==='ais2') pic="punacis2.png" ;
+  }
+      note.innerHTML += 
+            '<img src="'+pic+'" class="'+cl+'">';
+            
+     if(counter%4===0){
+        note.innerHTML += '<img src="blank.png" id="blank">';
+
+     }
+     if(counter%24===0) {
+    	 	note.innerHTML += '<img src="kljuc.png" id="kljuc">';
+    	 	polje.innerHTML += '<div class="note dva"></div>';
+    	    
+    	}
+     if(counter%30===0){
+        scrollDown();
+     }	
+     }
+    function playSound(e) {
+    	if(playing===1) {
+    		var d = new Date();
+            startTime=d.getTime();
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+      if (!audio)  return; 
+      // stop the function from running all together
+      
+       
+      key.classList.add('playing');
+      audio.currentTime = 0; // rewind to the start
+      audio.play();
+      playing=2;
+      }
+      }
+      
+    
+    function removeTransition(e) {
+      /* if (e.propertyName !== 'transform') return; // skip it if it's not a transform */
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+      key.classList.remove('playing');
+      playing=1
+       var b = new Date();
+       endTime=b.getTime();
+       time=endTime-startTime;
+       
+    }
+    let playing = 1;
+    let time=0;
+    let startTime=0;
+    let endTime=0;
+    window.addEventListener('keydown', playSound);
+    window.addEventListener('keyup', removeTransition);
+    window.addEventListener('keyup', drawNote); 
+    
+    
+    </script>
+  </html>
